@@ -140,7 +140,9 @@ function update() {
 			});
 			water = 0;
 			addScore(1);
-			cupCount++;
+			if(cupCount <= 5){
+				cupCount++;
+			}	
 		}
 	})
 	
