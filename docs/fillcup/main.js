@@ -85,7 +85,7 @@ function update() {
 			pos: vec(G.WIDTH/2, G.HEIGHT - G.HEIGHT/2)
 		};
 		waterDrop = {
-			pos: vec(G.WIDTH/2-1, G.HEIGHT - G.HEIGHT/2-25)
+			pos: vec(G.WIDTH/2-1, G.HEIGHT - G.HEIGHT/2-10)
 		};
 		cup = [];
 		cupCount = 0;
@@ -151,11 +151,11 @@ function update() {
 		char("a", waterDrop.pos);
 		const isCollidingWithCup = char("a", waterDrop.pos).isColliding.rect.blue;
 		if(isCollidingWithCup){
-			waterDrop.pos.y = G.HEIGHT- G.HEIGHT/2-25;
+			waterDrop.pos.y = G.HEIGHT- G.HEIGHT/2-10;
 			water++
 		}
 		if(waterDrop.pos.y > G.HEIGHT){
-			waterDrop.pos.y = G.HEIGHT - G.HEIGHT/2-25
+			waterDrop.pos.y = G.HEIGHT - G.HEIGHT/2-10;
 		} 
 		// water++;
 	}
